@@ -1,1 +1,110 @@
 /* pages/personal/personal.wxss */
+
+page{
+  background: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.personal-container{
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.personal-info{
+  height: 215rpx;
+  width: 100%;
+  background: #3a98cc;
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.personal-img-box{
+  float: left;
+  width: 135rpx;
+  height: 135rpx;
+  border-radius: 50%;
+  background: #357ca6;
+  box-sizing: border-box;
+  padding: 8rpx;
+}
+
+.personal-img-box image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.personal-content{
+  margin-left: 165rpx;
+}
+
+.personal-name{
+  font-size: 32rpx;
+  color: #f1fcf8;
+  line-height: 80rpx;
+}
+.personal-desc{
+  color: #f1fcf8;
+  font-size: 28rpx;
+}
+
+.funciton-content{
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.function-item{
+  height: 130rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+  padding: 35rpx 0;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 50rpx;
+}
+
+.function-item .left-icon{
+  font-size: 60rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.function-item .icon-xiaoxi{
+  color: #43d364;  
+}
+.function-item .icon-Opinion{
+  color: #df2b12;  
+}
+.function-item .icon-dangqianbanben{
+  color: #3c97dd;  
+}
+.function-item .icon-shezhi{
+  color: #f26a38;  
+}
+
+.function-item .icon-jiantou{
+  color: #e7e6eb;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.right-vision{
+  color: #989898;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.bind-btn{
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}

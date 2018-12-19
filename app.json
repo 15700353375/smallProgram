@@ -3,28 +3,51 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/personal/personal",
-    "pages/advertising",
     "pages/advertising/advertising"
   ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "name": "packA",
+      "pages": [
+        "pages/statistical/statistical"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "packageA"
+      ]
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#8eb9f5",
+    "navigationBarBackgroundColor": "#3a98cc",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "selectedColor": "#1296db",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "./img/icon/shouye_11.png",
+        "selectedIconPath": "./img/icon/shouye_1.png"
       },
       {
         "pagePath": "pages/advertising/advertising",
-        "text": "广告"
+        "text": "广告",
+        "iconPath": "./img/icon/gongnengguanli1.png",
+        "selectedIconPath": "./img/icon/gongnengguanli.png"
       },
       {
         "pagePath": "pages/personal/personal",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "./img/icon/ren1.png",
+        "selectedIconPath": "./img/icon/ren.png"
       }
     ]
   }

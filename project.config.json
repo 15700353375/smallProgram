@@ -9,7 +9,7 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
@@ -28,13 +28,24 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "自定义页面",
+					"pathName": "packageA/pages/statistical/statistical",
+					"query": ""
+				}
+			]
 		}
 	}
 }

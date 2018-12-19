@@ -2,13 +2,10 @@
 //获取应用实例
 const app = getApp()
 // import indexList from "../../mock/index-list.json"
+const indexList = require("../../mock/index-list.js")
 Page({
   data: {
-    list: [
-      {
-        title: '我是标题'
-      }
-    ]
+    alllist: [],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,15 +14,30 @@ Page({
     })
   },
   onLoad: function () {
-    // console.log(indexList)
+    console.log(indexList)
     this.getList();
   },
   getList: function(e) {
-    wx.request({
-      url: '../../mock/index-list.json',
-      success: (res)=>{
-        debugger
-      }
+    this.setData({
+      alllist: indexList.mtData
+    })
+    // wx.request({
+    //   url: '../../mock/index-list.json',
+    //   success: (res)=>{
+    //     debugger
+    //   }
+    // })
+  },
+  call(e){
+    let phone = e.currentTarget.dataset.phone    
+    console.log(phone)
+    wx.makePhoneCall({
+      phoneNumber: phone,
+    })
+  },
+  goStatistical(e){
+    wx.navigateTo({
+      url: '/packageA/pages/statistical/statistical',
     })
   }
 })

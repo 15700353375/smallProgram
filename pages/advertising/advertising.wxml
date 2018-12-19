@@ -1,2 +1,33 @@
 <!--pages/advertising/advertising.wxml-->
-<text>pages/advertising/advertising.wxml</text>
+<view class='ad-container'>
+  <view class='ad-item'>
+    <view class='img-box'>
+      <image src='../../img/9.jpg'></image>
+      <view class='ad-item-body'>
+        <view class='ad-item-title'>我是广告标题</view>
+        <view class='ad-item-content'>我是广告内小程序是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='ad-item'>
+    <view class='img-box'>
+      <image src='../../img/11.jpg'></image>
+      <view class='ad-item-body'>
+        <view class='ad-item-title'>我是广告标题</view>
+        <view class='ad-item-content'>我是广告内小程序是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='ad-item'>
+    <view class='img-box'>
+      <image src='../../img/12.jpg'></image>
+      <view class='ad-item-body'>
+        <view class='ad-item-title'>我是广告标题</view>
+        <view class='ad-item-content'>我是广告内小程序是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验。我是广告内小程序是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</view>
+      </view>
+    </view>
+  </view>
+
+</view>

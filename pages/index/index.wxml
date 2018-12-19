@@ -1,16 +1,17 @@
 <!--index.wxml-->
 <view class="list-container">
-  <view class='list'>
-    <image src='../../img/2.jpg'></image>
+  <view class='list' wx:for="{{alllist}}" wx:for-item="item" bindtap='goStatistical'>
+    <image src='{{item.img}}'></image>
     <view class='list-body'>
-      <view class='list-item-title'>我是标题</view>
+      <view class='list-item-title'>{{item.title}}</view>
       <view class='list-item-address'>
-        <icon type="success" size="12" color="green" />
-        我是地址
+        <!-- <icon type="success" size="12" color="green" /> -->
+        <text class="iconfont icon-dizhi-01"></text>
+        {{item.address}}
       </view>
-      <view class='list-item-phone'>
-        <icon type="success" size="12" color="green" />
-        15700353375
+      <view class='list-item-phone' data-phone="{{item.phone}}" bindtap='call'>
+        <text class='iconfont icon-dianhua'></text>
+        {{item.phone}}
       </view>
     </view>
   </view>

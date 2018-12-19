@@ -1,2 +1,54 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class='personal-container'>
+  <view class='personal-info'>
+    <view class='personal-img-box'>
+      <image src='../../img/2.jpg'></image>
+    </view>
+    <view class='personal-content'>
+      <view class='personal-name'>古天乐</view>
+      <view class='personal-desc'>钻石王老五</view>
+    </view>
+  </view>
+
+  <view class='funciton-content'>
+    <view class='function-item'>
+      <text class='iconfont icon-xiaoxi left-icon'></text>
+      消息列表
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+    <view class='function-item'>
+      <text class='iconfont .icon-Opinion left-icon'></text>
+      意见反馈
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+    <view class='function-item'>
+      <text class='iconfont icon-dangqianbanben left-icon'></text>
+      当前版本
+      <text class='right-vision'>v3.0.1</text>
+    </view>
+  </view>
+
+  <view class='funciton-content'>
+    <view class='function-item'>
+      <text class='iconfont icon-shezhi left-icon'></text>
+      关闭调试
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+  </view>
+
+  <view class='bind-btn'>
+    <button
+    type="default"
+    size="{{defaultSize}}"
+    loading="{{loading}}"
+    plain="{{plain}}"
+    disabled="{{disabled}}"
+    bindtap="default"
+    hover-class="other-button-hover"
+  >
+    重新绑定
+  </button>
+  </view>
+
+
+</view>
