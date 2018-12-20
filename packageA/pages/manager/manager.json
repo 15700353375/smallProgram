@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "经营管理",
+  "usingComponents": {
+    "bottom-tabs": "../components/bottom-tabs/bottom-tabs"
+  }
+}

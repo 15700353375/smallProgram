@@ -1,0 +1,10 @@
+<!--packageA/pages/report/report.wxml-->
+<view class='container'>
+  <view class='main'>
+
+  </view>
+  <view class='bottom-tab'>
+    <bottom-tabs currentName='report'></bottom-tabs>
+  </view>
+  
+</view>

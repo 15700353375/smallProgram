@@ -1,6 +1,6 @@
 <view class="container">
 
-  <scroll-view class="scroll-view_H" scroll-x="{{true}}" style="width: 100%">
+  <scroll-view class="scroll-view_H"  style="width: 100%">
     <view wx:for="{{classify}}" wx:key="id" 
           data-type="{{item.id}}" 
           class="scroll-view-item_H {{curTab==item.id?'sv-item-on':'sv-item-off'}}" 
@@ -8,42 +8,31 @@
       <text>{{item.name}}</text>
     </view>
   </scroll-view>
+<!-- <swiper class='swiper-main' bindchange='swiperChange' current="{{curTab}}">
+  <swiper-item>
+    <scroll-view scroll-y='true' class='scroll-h'>
+      <echarts></echarts>
+    </scroll-view>
+  </swiper-item>
 
-  <!-- <scroll-view class="scroll-view_H" scroll-x="{{true}}" style="width: 100%">
-    <view wx:for="{{classify}}" wx:key="id" 
-          data-type="{{item.id}}" 
-          class="scroll-view-item_H {{curTab==item.id?'sv-item-on':'sv-item-off'}}" 
-          bindtap="classifyClick">
-      <text>{{item.name}}</text>
-    </view>
-  </scroll-view> -->
+  <swiper-item>
+    <scroll-view scroll-y='true' class='scroll-h'>
+      <room></room>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y='true' class='scroll-h'>
+      <technician></technician>
+    </scroll-view>
+  </swiper-item>
+</swiper> -->
+
+
+<view class='bottom-tab'>
+  <bottom-tabs currentName='statistical'></bottom-tabs>
+</view>
   
-  <view class='container-statistical'>
-    <view class='statistical-title'>
-      <text class='text-title'>营业信息</text>
-      <text class='text-right'>2016-12-13 19:16:18 统计</text>
-    </view>
-    <view class='echarts-main'>
-      <ec-canvas class='myfirstChart' id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>      
-    </view>
-    <view class='statistical-title bg-color-gray'>
-      <text class='text-title'>收款方式</text>
-      <!-- <text class='text-right'>2016-12-13 19:16:18 统计</text> -->
-    </view>
 
-    <view class='bg-color-white clearfix'>
-      <view class='list-block'  
-              wx:for="{{buyList}}" 
-              wx:key="index" >
-              <view class='list-block-label'wx:if="{{item.label}}">
-                <view class='list-block-label' >{{item.label}}</view>
-                <view class='list-block-value' >￥{{item.value}}</view>
-              </view>
-              <view class='list-block-label' wx:else>-</view>
-      </view>
-      <view class='list-block-total'> 总计： <text class='total-value'>￥6546451</text> </view>
-    </view>
-  </view>
   
   
 

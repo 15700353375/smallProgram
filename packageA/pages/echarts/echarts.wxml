@@ -1,0 +1,71 @@
+<!--packageA/pages/components/echarts/echarts.wxml-->
+  <view class='container-statistical'>
+    <view class='statistical-title'>
+      <text class='text-title'>营业信息</text>
+      <text class='text-right'>2016-12-13 19:16:18 统计</text>
+    </view>
+    <view class='echarts-main'>
+      <ec-canvas class='myfirstChart' id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>      
+    </view>
+    <view class='statistical-title bg-color-gray'>
+      <text class='text-title'>收款方式</text>
+    </view>
+
+    <view class='bg-color-white list-block-main clearfix'>
+      <view class='clearfix'>
+        <view class='list-block'  
+              wx:for="{{buyList}}" 
+              wx:key="index" >
+              <view class='list-block-label'wx:if="{{item.label}}">
+                <view class='list-block-label' >{{item.label}}</view>
+                <view class='list-block-value' >￥{{item.value}}</view>
+              </view>
+              <view class='list-block-label' wx:else>-</view>
+        </view>
+      </view>
+      <view class='list-block-total'> 总计： <text class='total-value'>￥6546451</text> </view>
+    </view>
+
+    <view class='statistical-title'>
+      <text class='text-title'>营业信息</text>
+      <text class='text-right'>2016-12-13 19:16:18 统计</text>
+    </view>
+    <view class='echarts-main'>
+      <ec-canvas class='myfirstChart' id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>      
+    </view>
+
+    <view class='statistical-title bg-color-gray'>
+      <text class='text-title'>收款方式</text>
+    </view>
+    <view class='bg-color-white list-block-main clearfix'>
+      <view class='clearfix'>
+        <view class='list-block'  
+              wx:for="{{buyList}}" 
+              wx:key="index" >
+              <view class='list-block-label'wx:if="{{item.label}}">
+                <view class='list-block-label' >{{item.label}}</view>
+                <view class='list-block-value' >￥{{item.value}}</view>
+              </view>
+              <view class='list-block-label' wx:else>-</view>
+        </view>
+      </view>
+      <view class='list-block-total'> 总计： <text class='total-value'>￥6546451</text> </view>
+    </view>
+
+    <view class='statistical-title bg-color-white'>
+      <text class='text-title'>收款合计</text>
+    </view>
+    <view class='oper-block-box clearfix'>
+      <view class='oper-block'>收款总合计  <text class='oper-block-value' >￥584155</text></view>
+      <view class='oper-block'>现金  <text class='oper-block-value' >￥5155</text></view>
+      <view class='oper-block'>支付宝  <text class='oper-block-value' >￥545155</text></view>
+      <view class='oper-block'>微信  <text class='oper-block-value' >￥88955</text></view>
+    </view>
+
+
+
+
+
+
+
+  </view>

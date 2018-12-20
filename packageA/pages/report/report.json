@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报表决策",
+  "usingComponents": {
+    "bottom-tabs": "../components/bottom-tabs/bottom-tabs"
+  }
+}

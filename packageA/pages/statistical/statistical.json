@@ -1,5 +1,9 @@
 {
+  "navigationBarTitleText": "营业数据",
   "usingComponents": {
-    "ec-canvas": "../../ec-canvas/ec-canvas"
+    "room": "../components/room/room",
+    "technician": "../components/technician/technician",
+    "bottom-tabs": "../components/bottom-tabs/bottom-tabs",
+    "echarts": "../echarts/echarts"
   }
 }

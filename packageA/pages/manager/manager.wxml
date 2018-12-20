@@ -1,0 +1,11 @@
+<!--packageA/pages/manager/manager.wxml-->
+<view class='container'>
+  <view class='main'>
+
+  </view>
+  <view class='bottom-tab'>
+    <bottom-tabs currentName='manager'></bottom-tabs>
+  </view>
+  
+</view>
+
