@@ -42,10 +42,10 @@ Component({
         return;
       }else{
         switch(types){
-          case 'statistical': return wx.redirectTo({ url: '/packageA/pages/statistical/statistical', });
-          case 'report': return wx.redirectTo({ url: '/packageA/pages/report/report', });
-          case 'manager': return wx.redirectTo({ url: '/packageA/pages/manager/manager', });
-          case 'myself': return wx.redirectTo({ url: '/packageA/pages/myself/myself',});
+          case 'statistical': return wx.navigateTo({ url: '/packageA/pages/statistical/statistical', });
+          case 'report': return wx.navigateTo({ url: '/packageA/pages/report/report', });
+          case 'manager': return wx.navigateTo({ url: '/packageA/pages/manager/manager', });
+          case 'myself': return wx.navigateTo({ url: '/packageA/pages/myself/myself',});
         }
         
       }

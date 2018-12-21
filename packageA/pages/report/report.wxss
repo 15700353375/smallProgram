@@ -1,4 +1,16 @@
 /* packageA/pages/report/report.wxss */
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
 page{
   background: #f1f1f1;
   width: 100%;
@@ -16,6 +28,7 @@ page{
 }
 
 .main{
+  width: 100%;
   flex: 1;
 }
 .bottom-tab{
@@ -23,4 +36,67 @@ page{
   width: 100%;
   background: #eee;
   border-top: 2rpx solid #ddd;
+}
+
+/* 模块样式 */
+.report-block{
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.report-title{
+  height: 68rpx;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;  
+  border-bottom: 2rpx solid #ddd;
+  position: relative;
+  background: #fff;  
+}
+.report-title:before{
+  content: '';
+  position: absolute;  
+  display: block;
+  width: 10rpx;
+  height: 28rpx;  
+  top: 18rpx;
+  background: #3a98cc;
+}
+
+.report-title .text-title{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #000;
+  float: left;
+  margin-left: 30rpx;
+}
+.text-right{
+  float: right;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #999999;
+}
+
+
+.report-content{
+  border-bottom: 2rpx solid #ddd;
+}
+.report-item{
+  width: 25%;
+  height: 100%;
+  padding: 10rpx 0;
+  text-align: center;
+  float: left;
+}
+
+.report-item-icon{
+  text-align: center;  
+}
+.report-item-icon .iconfont{
+  color: green;
+  font-size: 46rpx;
+}
+.report-item-text{
+  text-align: center;
+  color: #666;
+  font-size: 26rpx;
 }

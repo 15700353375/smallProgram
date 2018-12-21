@@ -42,7 +42,13 @@
 				{
 					"id": 0,
 					"name": "自定义页面",
-					"pathName": "packageA/pages/statistical/statistical",
+					"pathName": "packageA/pages/report/report",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试页面",
+					"pathName": "pages/logs/logs",
 					"query": ""
 				}
 			]

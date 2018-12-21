@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "查看启动日志"
+  "usingComponents": {
+    "tab-view": "../components/tab-view/tab-view"
+  }
 }

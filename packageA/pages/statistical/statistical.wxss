@@ -3,20 +3,32 @@ page{
   background: #f1f1f1;
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
 }
 
 .container{
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  /* display: flex;  */
+ /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: space-between; */
 }
-.swiper-main{
+/* 
+#mytabview{
   width: 100%;
-  flex: 1;
+} */
+.swiper-main{
+  width: 100%; 
+
+  /* flex: 1; */
+  overflow-y: auto;
+  /* transform-style: preserve-3d; */
+}
+
+.swiper-main-box{
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -25,19 +37,32 @@ page{
   width: 100%;
   background: #eee;
   border-top: 2rpx solid #ddd;
+  position: fixed;
+  bottom: 0;
 }
-
-.scroll-view_H{
-  width: 100%;
+.top-tab{
   height: 80rpx;
-  white-space: nowrap;
-  border-bottom: 2rpx solid #c8c8c8;  
-  background: #efeef3;
+  width: 100%;
+  background: #f1f1f1;
+  /* position: relative; */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+}
+scroll-view{
+  height: 80rpx;
+  width: 100%;
+  overflow-y: hidden;
+  background: #f1f1f1;
+  /* position: relative; */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
 }
 
 .scroll-view-item_H{
   width: 30%;
-  height: 100%;
+  height: 80rpx;
   display: inline-block;
   text-align: center;
   line-height: 80rpx;
@@ -57,3 +82,165 @@ page{
 .scroll-h{
   height: 100%;
 }
+
+
+/* .charts::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.echarts-main{
+  background: #fff;  
+  width: 100%;
+  height: 500rpx;
+  position:relative;
+  z-index:1;
+}
+
+
+
+
+.container-statistical{
+  overflow-y: auto;
+  width: 100%;
+  /* height: auto;
+  flex: 1; */
+  position: relative;
+  /* height: calc(100% - 100rpx); */
+}
+.statistical-title{
+  height: 68rpx;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;  
+  border-bottom: 2rpx solid #ddd;
+  position: relative;
+  background: #fff;  
+}
+.statistical-title:before{
+  content: '';
+  position: absolute;  
+  display: block;
+  width: 10rpx;
+  height: 28rpx;  
+  top: 18rpx;
+  background: #3a98cc;
+}
+
+.statistical-title .text-title{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #000;
+  float: left;
+  margin-left: 30rpx;
+}
+.text-right{
+  float: right;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #999999;
+}
+
+.bg-color-gray{
+  background: #f1f1f1;
+}
+
+.bg-color-white{
+  background: #fff;
+}
+.list-block-main{
+  margin-bottom: 20rpx;
+}
+.list-block{
+  width: 25%;
+  height: 90rpx;
+  border-right:  2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.list-block-label{
+  color: #b1b1b1;
+  line-height: 42rpx;
+  font-size: 24rpx;
+}
+.list-block-value{
+  color: #db6734;
+  line-height: 42rpx;
+  font-size: 24rpx;
+}
+.list-block-total{
+  padding: 20rpx;
+  box-sizing: border-box;
+  color: #b1b1b1;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.list-block-total .total-value{
+  float: right;
+  color: #db6734;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
+.oper-block{
+  height: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+  background: #fff;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx; 
+  color: #999; 
+}
+
+.oper-block-value{
+  float: right;
+  color: #db6734;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+/* 
+.myfirstChart{
+  position:absolute;
+  top:0rpx;
+  width: 600rpx;
+  height: 600rpx;
+} */
