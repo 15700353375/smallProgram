@@ -1,21 +1,21 @@
 <!--packageA/pages/components/bottom-tabs/bottom-tabs.wxml-->
 
 
-<cover-view class='bottom-tabs-main'>
-  <cover-view class='bottom-tabs-item {{currentType == "statistical" ? "active": ""}}' data-type='statistical' bindtap='goPages'>
-    <cover-view class="iconfont icon-shouye2"></cover-view>
-    <cover-view class='bottom-tabs-item-text'>即时信息</cover-view>
-  </cover-view>
-  <cover-view class='bottom-tabs-item {{currentType == "report" ? "active": ""}}' data-type='report' bindtap='goPages'>
-    <cover-view class="iconfont icon-laoban"></cover-view>
-    <cover-view class='bottom-tabs-item-text'>报表决策</cover-view>
-  </cover-view>
-  <cover-view class='bottom-tabs-item {{currentType == "manager" ? "active": ""}}' data-type='manager' bindtap='goPages'>
-    <cover-view class="iconfont icon-guanli"></cover-view>
-    <cover-view class='bottom-tabs-item-text'>经营管理</cover-view>
-  </cover-view>
-  <cover-view class='bottom-tabs-item {{currentType == "myself" ? "active": ""}}' data-type='myself' bindtap='goPages'>
-    <cover-view class="iconfont icon-tubiaolunkuo-"></cover-view>
-    <cover-view class='bottom-tabs-item-text'>我的</cover-view>
-  </cover-view>
-</cover-view>
+<view class='bottom-tabs-main'>
+  <view class='bottom-tabs-item {{currentType == "statistical" ? "active": ""}}' data-type='statistical' bindtap='goPages'>
+    <view class="iconfont icon-shouye2"></view>
+    <view class='bottom-tabs-item-text'>即时信息</view>
+  </view>
+  <view class='bottom-tabs-item {{currentType == "report" ? "active": ""}}' data-type='report' bindtap='goPages'>
+    <view class="iconfont icon-laoban"></view>
+    <view class='bottom-tabs-item-text'>报表决策</view>
+  </view>
+  <view class='bottom-tabs-item {{currentType == "manager" ? "active": ""}}' data-type='manager' bindtap='goPages'>
+    <view class="iconfont icon-guanli"></view>
+    <view class='bottom-tabs-item-text'>经营管理</view>
+  </view>
+  <view class='bottom-tabs-item {{currentType == "myself" ? "active": ""}}' data-type='myself' bindtap='goPages'>
+    <view class="iconfont icon-tubiaolunkuo-"></view>
+    <view class='bottom-tabs-item-text'>我的</view>
+  </view>
+</view>

@@ -4,46 +4,84 @@
     <!-- <web-view src="http://www.huixuebang.com/" onMessage="test"></web-view> -->
     <view class='report-block clearfix'>
       <view class='report-title clearfix'>
-        <text class='text-title'>营业信息</text>
-        <!-- <text class='text-right'>2016-12-13 19:16:18 统计</text> -->
+        <text class='text-title'>营业报表</text>
       </view>
       <view class='report-content clearfix'>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-shijian1'></text></view>
+          <view class='report-item-text'>时段汇总表</view>
         </view>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-info icon-mingxi3'></text></view>
+          <view class='report-item-text'>营业明细表</view>
         </view>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-error icon-navicon-lyhztj'></text></view>
+          <view class='report-item-text'>项目汇总表</view>
         </view>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-shangpin'></text></view>
+          <view class='report-item-text'>商品汇总表</view>
         </view>
       </view>
       <view class='report-content clearfix'>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-warning icon-gongzibiaoshenhe'></text></view>
+          <view class='report-item-text'>提成工资表</view>
         </view>
         <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
-        </view>
-        <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
-        </view>
-        <view class='report-item'>
-          <view class='report-item-icon'><text class='iconfont icon-shouye1'></text></view>
-          <view class='report-item-text'>内容部分</view>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-tichengguize'></text></view>
+          <view class='report-item-text'>提成汇总表</view>
         </view>
       </view>
     </view>
+
+    <view class='report-block clearfix'>
+      <view class='report-title clearfix'>
+        <text class='text-title'>会员报表</text>
+      </view>
+      <view class='report-content clearfix'>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-error icon-chongzhi'></text></view>
+          <view class='report-item-text'>充值未收款</view>
+        </view>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-warning icon-navicon-kcmxtj'></text></view>
+          <view class='report-item-text'>充值收款明细</view>
+        </view>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-navicon-hzsb'></text></view>
+          <view class='report-item-text'>充值汇总表</view>
+        </view>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-huiyuan'></text></view>
+          <view class='report-item-text'>会员分析表</view>
+        </view>
+      </view>
+      <view class='report-content clearfix'>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-error icon-huiyuan'></text></view>
+          <view class='report-item-text'>呆滞会员表</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='report-block clearfix'>
+      <view class='report-title clearfix'>
+        <text class='text-title'>经营管理分析</text>
+      </view>
+      <view class='report-content clearfix'>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-warning icon-pingjia1'></text></view>
+          <view class='report-item-text'>顾客评价概况</view>
+        </view>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-warning icon-pingjia'></text></view>
+          <view class='report-item-text'>顾客评价详细</view>
+        </view>
+      </view>
+    </view>
+
   </view>
   <view class='bottom-tab'>
     <bottom-tabs currentName='report'></bottom-tabs>

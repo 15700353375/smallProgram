@@ -1,11 +1,25 @@
-<!--packageA/pages/manager/manager.wxml-->
+<!--packageA/pages/report/report.wxml-->
 <view class='container'>
   <view class='main'>
-
+    <!-- <web-view src="http://www.huixuebang.com/" onMessage="test"></web-view> -->
+    <view class='report-block clearfix'>
+      <view class='report-title clearfix'>
+        <text class='text-title'>拓客营销</text>
+      </view>
+      <view class='report-content clearfix'>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-warning icon-quan'></text></view>
+          <view class='report-item-text'>电子券</view>
+        </view>
+        <view class='report-item'>
+          <view class='report-item-icon'><text class='iconfont bg-success icon-duanxin'></text></view>
+          <view class='report-item-text'>短信群发</view>
+        </view>
+      </view>
+    </view>
   </view>
   <view class='bottom-tab'>
     <bottom-tabs currentName='manager'></bottom-tabs>
   </view>
   
 </view>
-

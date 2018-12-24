@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "经营管理",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
   "usingComponents": {
     "bottom-tabs": "../components/bottom-tabs/bottom-tabs"
   }

@@ -17,7 +17,7 @@
       <text class='iconfont icon-jiantou'></text>
     </view>
     <view class='function-item'>
-      <text class='iconfont .icon-Opinion left-icon'></text>
+      <text class='iconfont icon-yijian1 left-icon'></text>
       意见反馈
       <text class='iconfont icon-jiantou'></text>
     </view>

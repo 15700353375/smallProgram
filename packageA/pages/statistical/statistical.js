@@ -86,6 +86,15 @@ Page({
 
   data: {
 
+    ec1: {
+      // lazyLoad: true  /*对比拆线图*/
+      onInit: initChart,
+    },
+
+    ec2: {
+      onInit: initChart,
+    },
+
 
 
     classify: [
@@ -151,6 +160,15 @@ Page({
 
 
 
+
+
+  },
+
+  toggleTab(e){
+    console.log(e.detail)
+    this.setData({
+      curTab: e.detail.curTab
+    })
   },
 
   touchstart(e){
@@ -163,14 +181,12 @@ Page({
 
   swiperChange(e){
     let ind = e.detail.current;
-    debugger
     console.log(ind)
   },
   bindanimationfinish(e){
     this.isFinishAnimation = true;
   },
   classifyClick(e) {
-    // debugger
     console.log(e.currentTarget.dataset.type)
     this.setData({
       curTab: e.currentTarget.dataset.type

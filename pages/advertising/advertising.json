@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "广告推广",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

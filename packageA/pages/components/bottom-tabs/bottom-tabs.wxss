@@ -4,6 +4,7 @@
   width: 100%;
   height: 100%;
   background: #fff;
+  padding: 16rpx 0;
 }
 
 .bottom-tabs-item{
@@ -13,7 +14,7 @@
   float: left;
 }
 .bottom-tabs-item .iconfont{
-  font-size: 30rpx;
+  font-size: 40rpx;
   color: #666;
 }
 .bottom-tabs-item .bottom-tabs-item-text{

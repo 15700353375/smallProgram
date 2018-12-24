@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "营业数据",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "room": "../components/room/room",
     "technician": "../components/technician/technician",

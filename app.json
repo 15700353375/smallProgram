@@ -3,8 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/personal/personal",
-    "pages/advertising/advertising",
-    "packageA/pages/myself/myself"
+    "pages/advertising/advertising"
   ],
   "subpackages": [
     {
@@ -13,7 +12,8 @@
       "pages": [
         "pages/statistical/statistical",
         "pages/report/report",
-        "pages/manager/manager"
+        "pages/manager/manager",
+        "pages/myself/myself"
       ]
     }
   ],

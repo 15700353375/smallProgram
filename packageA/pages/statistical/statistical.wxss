@@ -3,42 +3,26 @@ page{
   background: #f1f1f1;
   width: 100%;
   height: 100%;
-  /* display: flex; */
 }
 
 .container{
   width: 100%;
   height: 100%;
-  /* display: flex;  */
- /* flex-direction: column; */
-  /* align-items: center;
-  justify-content: space-between; */
-}
-/* 
-#mytabview{
-  width: 100%;
-} */
-.swiper-main{
-  width: 100%; 
-
-  /* flex: 1; */
-  overflow-y: auto;
-  /* transform-style: preserve-3d; */
-}
-
-.swiper-main-box{
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .bottom-tab{
-  height: 80rpx;
+  height: 120rpx;
   width: 100%;
   background: #eee;
   border-top: 2rpx solid #ddd;
   position: fixed;
   bottom: 0;
+  z-index: 9999;
 }
 .top-tab{
   height: 80rpx;
@@ -49,6 +33,8 @@ page{
   z-index: 9999;
   top: 0;
 }
+
+/* 顶部tab样式 */
 scroll-view{
   height: 80rpx;
   width: 100%;
@@ -79,55 +65,47 @@ scroll-view{
 }
 
 
-.scroll-h{
-  height: 100%;
-}
 
 
-/* .charts::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: #fff;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.echarts-main{
-  background: #fff;  
+.containter-main{
+  flex: 1;
   width: 100%;
-  height: 500rpx;
-  position:relative;
-  z-index:1;
+  overflow-y: auto;
+  position: relative;
+  margin-top: 80rpx;
+  margin-bottom: 120rpx;
 }
+
+.containter-echarts{
+  /* width: 100%;
+  height: 100%;
+  margin-top: 80rpx;
+  margin-bottom: 120rpx; */
+  /* width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: relative;
+  margin-top: 80rpx;
+  margin-bottom: 120rpx; */
+}
+
+
+
+
+
+
+
+
+
 
 
 
 
 .container-statistical{
-  overflow-y: auto;
   width: 100%;
-  /* height: auto;
-  flex: 1; */
-  position: relative;
-  /* height: calc(100% - 100rpx); */
+  height: 100%;
+  overflow-y: auto;
 }
 .statistical-title{
   height: 68rpx;
@@ -237,10 +215,62 @@ scroll-view{
   line-height: 60rpx;
   font-size: 24rpx;
 }
-/* 
-.myfirstChart{
-  position:absolute;
-  top:0rpx;
-  width: 600rpx;
+
+.echarts-main{
+  background: #fff;  
+  width: 100%;
   height: 600rpx;
+}
+
+
+.top-tab{
+  height: 80rpx;
+  width: 100%;
+  background: #f1f1f1;
+  position: relative;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+}
+
+/* .scroll-view_H{
+  width: 100%;
+  height: 80rpx;
+  white-space: nowrap;
+  border-bottom: 2rpx solid #c8c8c8;  
+  background: #efeef3;
 } */
+
+.scroll-view-item_H{
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.scroll-view-item_H .tab-text{
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+/* .echarts--scroll-view-item_H.echarts--sv-item-on .echarts--tab-text{
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  height: 76rpx;
+  border-bottom: 4rpx solid #3b72f0;
+} */
+
+.sv-item-on .tab-text{
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  height: 76rpx;
+  border-bottom: 4rpx solid #3b72f0;
+}

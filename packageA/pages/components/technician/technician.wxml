@@ -1,2 +1,37 @@
 <!--packageA/pages/components/technician/technician.wxml-->
-<text>packageA/pages/components/technician/technician.wxml</text>
+
+
+<view class='container'>
+  <view class='tec-main clearfix'>
+    <view class='tec-title'>保健师</view>
+    <view class='tec-content clearfix'>
+      <view class='tec-item' wx:for='{{listData}}' wx:for-item="item">
+        <text class='iconfont icon-huiyuan {{item.status == 3 ? "error": ""}}'></text>
+        <view class='tec-item-num {{item.status == 1 ? "success": item.status == 2 ? "warning": "info"}}'>015</view>
+        <view class='tec-item-type clearfix {{item.status == 1 ? "success": item.status == 2 ? "warning": "info"}}'>
+          <text class='tec-item-type-left'>0</text>
+          <text class='tec-item-type-center'>暂停</text>
+          <text class='tec-item-type-right'>0</text>
+        </view>
+      </view>
+    </view>
+    <view class='tec-footer'>空闲： 10 忙碌：45 预约： 30 暂停： 44</view>
+  </view>
+
+  <view class='tec-main clearfix'>
+    <view class='tec-title'>足疗师</view>
+    <view class='tec-content clearfix'>
+      <view class='tec-item' wx:for='{{listData}}' wx:for-item="item">
+        <text class='iconfont icon-huiyuan {{item.status == 3 ? "error": ""}}'></text>
+        <view class='tec-item-num {{item.status == 1 ? "success": item.status == 2 ? "warning": "info"}}'>015</view>
+        <view class='tec-item-type clearfix {{item.status == 1 ? "success": item.status == 2 ? "warning": "info"}}'>
+          <text class='tec-item-type-left'>0</text>
+          <text class='tec-item-type-center'>暂停</text>
+          <text class='tec-item-type-right'>0</text>
+        </view>
+      </view>
+    </view>
+    <view class='tec-footer'>空闲： 10 忙碌：45 预约： 30 暂停： 44</view>
+  </view>
+
+</view>

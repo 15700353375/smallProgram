@@ -1,1 +1,121 @@
 /* packageA/pages/components/technician/technician.wxss */
+
+@import '../../../../styles/icon.wxss';
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* margin-top: 100rpx; */
+  background: #fff;
+  flex: 1;
+}
+
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
+.tec-title{
+  text-align: center;
+  font-size: 28rpx;
+  color: #000;
+  line-height: 80rpx;
+}
+
+.tec-footer{
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 80rpx;
+}
+
+.tec-item{
+  height: 113rpx;
+  width: calc((100% - 180rpx) /5);
+  overflow: hidden;
+  margin-left: 30rpx;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  background: #ddd;
+  float: left;
+  margin-top: 10rpx;
+}
+
+.list-item:nth-of-type(5n+0){
+  margin-right: 30rpx;
+}
+
+.tec-item-num{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: #84dbb9;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tec-item-num.success{
+  background: #84dbb9;
+}
+.tec-item-num.info{
+  background: #f53c4a;
+}
+.tec-item-num.warning{
+  background: #fc6025;
+}
+
+.tec-item .iconfont{
+  position: absolute;
+  right: 6rpx;
+  top: 10rpx;
+  font-size: 20rpx;
+  color: #fff;
+  z-index: 99;
+}
+.tec-item .iconfont.error{
+  color: #000;
+}
+
+
+
+.tec-item-type{
+  width: 100%;
+  height: 43rpx;
+  line-height: 43rpx;
+  color: #fff;
+  background: #54c2a5;
+  text-align: center;
+  overflow: hidden;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.tec-item-type.success{
+  background: #54c2a5;
+}
+.tec-item-type.info{
+  background: #989898;
+}
+.tec-item-type.warning{
+  background: #fcbd9a;
+}
+
+.tec-item-type-left{
+  float: left;
+}
+.tec-item-type-right{
+  float: right;
+}
+

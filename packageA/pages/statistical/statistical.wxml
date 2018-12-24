@@ -1,4 +1,7 @@
 <view class="container">
+
+
+<!-- <web-view src="http://www.huixuebang.com/"></web-view> -->
 <!-- <cover-view class='cover-tab-top'>
   <scroll-view>
     <view wx:for="{{classify}}" wx:key="id" 
@@ -47,7 +50,7 @@
 
   <!-- <van-button type="primary">按钮</van-button> -->
 
-<view class='container-statistical' bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if='{{curTab == 0}}'>
+<!-- <view class='container-statistical' bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if='{{curTab == 0}}'>
   <view class='statistical-title'>
     <text class='text-title'>营业信息</text>
     <text class='text-right'>2016-12-13 19:16:18 统计</text>
@@ -119,10 +122,20 @@
     <view class='oper-block'>支付宝  <text class='oper-block-value' >￥545155</text></view>
     <view class='oper-block'>微信  <text class='oper-block-value' >￥88955</text></view>
   </view>
-</view>
- 
+</view> -->
 
-  <!-- <swiper class='swiper-main-box' bindchange='swiperChange' current="{{curTab}}">
+  <echarts style='width:100%;' wx:if='{{curTab == 0}}' bind:myevent="toggleTab"></echarts>
+
+
+<view class='{{curTab != 0 ? "containter-main":"containter-echarts"}}'>
+  
+
+  <room wx:if='{{curTab == 1}}'></room>
+  
+  <technician wx:if='{{curTab == 2}}'></technician>
+
+</view>
+<!-- <swiper class='swiper-main-box' bindchange='swiperChange' current="{{curTab}}">
     <swiper-item>
       <scroll-view scroll-y='true'>
         <echarts class='charts' brandContribute-news="{{newsChart}}" bind:removeContrase="showAddContrastBoxWrap"></echarts>        
@@ -139,13 +152,9 @@
         <technician></technician>
       </scroll-view>
     </swiper-item>
-  </swiper> -->
+</swiper> -->
 
  
-  
-
-
-
 <view class='bottom-tab'>
   <bottom-tabs currentName='statistical'></bottom-tabs>
 </view>

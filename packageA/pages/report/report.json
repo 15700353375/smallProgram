@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "报表决策",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "bottom-tabs": "../components/bottom-tabs/bottom-tabs"
   }

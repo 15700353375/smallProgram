@@ -1,1 +1,10 @@
-{}
+{
+  "navigationBarTitleText": "门店营销",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "bottom-tabs": "../components/bottom-tabs/bottom-tabs"
+  }
+}

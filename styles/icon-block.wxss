@@ -1,0 +1,91 @@
+
+
+/* 模块样式 */
+.report-block{
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.report-title{
+  height: 58rpx;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;  
+  border-bottom: 2rpx solid #e1e1e1;
+  position: relative;
+  background: #fff;  
+}
+.report-title:before{
+  content: '';
+  position: absolute;  
+  display: block;
+  width: 10rpx;
+  height: 28rpx;  
+  top: 18rpx;
+  background: #3a98cc;
+}
+
+.report-title .text-title{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #000;
+  float: left;
+  margin-left: 30rpx;
+}
+.text-right{
+  float: right;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #999999;
+}
+
+
+/* 图标块样式 */
+.report-content{
+  border-bottom: 2rpx solid #eeeeee;
+}
+.report-item{
+  width: 25%;
+  height: 100%;
+  padding: 20rpx 0;
+  text-align: center;
+  float: left;
+  height: 170rpx;
+  box-sizing: border-box;
+}
+
+.report-item-icon{
+  text-align: center;  
+  height: 80rpx;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+.report-item-icon .iconfont{
+  display: inline-block;
+  color: #fff;
+  font-size: 46rpx;
+  /* background:#4fc2c5; */
+  border-radius:50%;
+  padding: 18rpx;
+  line-height: 1;
+  text-align: center;
+}
+.report-item-text{
+  text-align: center;
+  color: #666;
+  font-size: 26rpx;
+}
+
+
+.bg-success{
+  background: #4fc2c7;
+}
+.bg-warning{
+  background: #f19d29;
+}
+.bg-error{
+  background: #ff6a9d;
+}
+.bg-info{
+  background: #3a99c9;
+}

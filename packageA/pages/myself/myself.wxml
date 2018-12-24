@@ -1,2 +1,57 @@
 <!--packageA/pages/myself/myself.wxml-->
-<text>packageA/pages/myself/myself.wxml</text>
+<view class='container'>
+  <!--pages/personal/personal.wxml-->
+<view class='personal-container'>
+  <view class='personal-info'>
+    <view class='personal-img-box'>
+      <image src='../../../img/2.jpg'></image>
+    </view>
+    <view class='personal-content'>
+      <view class='personal-name'>古天乐</view>
+      <view class='personal-desc'>您的付费体验还剩下 <text>0</text> 天</view>
+      <view class='personal-type'>管理者</view>
+      <view class='personal-btn' type="default">续费</view>
+    </view>
+  </view>
+
+  <view class='funciton-content'>
+    <view class='function-item'>
+      消息列表
+      <text class='right-vision'>0元</text>
+    </view>
+    <view class='function-item'>
+      最低折扣
+      <text class='right-vision'>100%</text>
+    </view>
+  </view>
+
+  <view class='funciton-content'>
+    <view class='function-item'>
+      在线登录授权
+      <text class='right-vision'>未开放</text>
+    </view>
+    <view class='function-item'>
+      点钟宝报警
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+  </view>
+
+  <view class='funciton-content'>
+    <view class='function-item'>
+      有效期至
+      <text class='right-vision'>2019.01.01</text>
+    </view>
+    <view class='function-item'>
+      当前版本
+      <text class='right-vision'>v1.0.0</text>
+    </view>
+  </view>
+</view>
+
+
+
+  <view class='bottom-tab'>
+    <bottom-tabs currentName='myself'></bottom-tabs>
+  </view>
+  
+</view>
