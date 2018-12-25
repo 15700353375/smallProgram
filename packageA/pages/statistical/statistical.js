@@ -47,7 +47,6 @@ function initChart(canvas, width, height) {
           show: true,
           length: 10,
           length2: 8,
-
         },
         label: {
           normal: {

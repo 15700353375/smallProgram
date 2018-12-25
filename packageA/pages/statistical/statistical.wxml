@@ -1,7 +1,7 @@
 <view class="container">
 
 
-<!-- <web-view src="http://www.huixuebang.com/"></web-view> -->
+<web-view src="http://192.168.0.98:8003/#/"></web-view>
 <!-- <cover-view class='cover-tab-top'>
   <scroll-view>
     <view wx:for="{{classify}}" wx:key="id" 
