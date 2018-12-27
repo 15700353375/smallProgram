@@ -1,5 +1,10 @@
 {
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "登录",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
   "usingComponents": {
-    "tab-view": "../components/tab-view/tab-view"
+    "login": "../components/login/login"
   }
 }

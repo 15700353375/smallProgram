@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="list-container">
   <view class='list' wx:for="{{alllist}}" wx:for-item="item" bindtap='goStatistical'>
-    <image src='{{item.img}}'></image>
+    <image src='{{item.images.large}}'></image>
     <view class='list-body'>
-      <view class='list-item-title'>{{item.title}}</view>
-      <view class='list-item-address'>
+      <view class='list-item-title text-ellipsis'>{{item.title}}</view>
+      <view class='list-item-address text-ellipsis'>
         <!-- <icon type="success" size="12" color="green" /> -->
         <text class="iconfont icon-dizhi-01"></text>
-        {{item.address}}
+        {{item.summary}}
       </view>
       <view class='list-item-phone' data-phone="{{item.phone}}" bindtap='call'>
         <text class='iconfont icon-dianhua'></text>

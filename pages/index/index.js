@@ -1,5 +1,5 @@
-// import * as echarts from '../../../ec-canvas/echarts';
-//index.js
+
+var common = require("../../utils/common.js")
 //获取应用实例
 const app = getApp()
 // import indexList from "../../mock/index-list.json"
@@ -14,14 +14,39 @@ Page({
       url: '../logs/logs'
     })
   },
+
+
   onLoad: function () {
+    // debugger
+    // // 检测是否登录
+    // common.userLogin()
+    
+
+
+
     console.log(indexList)
     this.getList();
   },
+
+
   getList: function(e) {
-    this.setData({
-      alllist: indexList.mtData
-    })
+    let that = this;
+
+    // 豆瓣电影
+    wx.request({
+      url: 'http://t.yushu.im/v2/movie/in_theaters',
+      data: {},
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        console.log(res.data.subjects);
+        that.setData({
+          alllist: res.data.subjects
+        })
+      },
+    });  
+
     // wx.request({
     //   url: '../../mock/index-list.json',
     //   success: (res)=>{
@@ -38,7 +63,7 @@ Page({
   },
   goStatistical(e){
     wx.navigateTo({
-      url: '/packageA/pages/statistical/statistical',
+      url: '/pages/statistical/statistical',
     })
   }
 })

@@ -1,60 +1,17 @@
-<!-- <tab-view 
-  id='mytabview' 
-  tabs='{{tabs}}'
-  bindpagechange="pageChangeEvent" 
-  bindscrolltobottom='scrolltobottomEvent'>
-  <view 
-  wx:for='{{slotIds}}' 
-  wx:key 
-  wx:for-index='slotindex' 
-  wx:for-item='slotitem' 
-  slot='{{slotitem}}'>
-    <view 
-    class='order-item' 
-    wx:for='{{[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]}}' 
-    wx:key 
-    wx:for-item='orderitem'>
-    {{"page: " + slotindex + " --- item: " + orderitem}}
-    </view>
-  </view>
-</tab-view> -->
-
+  
 <view class='container'>
-<view class='top'></view>
-<view class='main'>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
+    <view class='clearfix userinfo-mian' wx:if='{{!isGoLogin}}'>
+      <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="../../img/icon/gongneng.png" mode="cover"></image>
+        <view class="userinfo-tips">允许小程序获取您的基本信息（头像、昵称等）</view>
+      </view>
 
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  
-
-  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler">
-    <cover-view class="top">显示在canvas之上</cover-view>
-  </canvas>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  <view>计划的方式感受到非公开水电费</view>
-  
-</view>
-<view class='bottom'></view>
-  
+      <view class='footer-main'>
+        <view class='footer-btn'><button class='login-btn' bindtap='login'> 重新登录 </button></view>
+        <view class='footer-text'>足浴保健行业引领者</view>
+      </view>
+    </view>
+    <view class='login-main' wx:if='{{isGoLogin}}'>
+      <login></login>
+    </view>
 </view>

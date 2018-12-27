@@ -1,98 +1,104 @@
-//logs.js
-// const util = require('../../utils/util.js')
-var wxCharts = require('../../utils/wxcharts.js');   //引入wxChart文件
-var app = getApp();
-var lineChart = null;
+// pages/personal/personal.js
+//index.js
+var login = require("../../utils/common.js")
+//获取应用实例
+const app = getApp()
 Page({
 
+  /**
+   * 页面的初始数据
+   */
   data: {
-    // tabs: [],
-    // tabs: ['我已报名', '我的发布'],
-    // tabs: ['吕布', '赤兔马', '方天画戟'],
-    // tabs: ['昨天', '今天', '明天', '后天'],
-    tabs: ['全部', '待付款', '待发货', '待收货', '待评价'],
-    currentIndex: 0
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    isGoLogin: false,
   },
 
-  touchHandler: function (e) {
-    lineChart.showToolTip(e, {
-      // background: '#7cb5ec',
-      format: function (item, category) {
-        return category + ' ' + item.name + ':' + item.data
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function () {
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
       }
-    });
-  },
-
-
-  // onLoad: function (options) {
-  //   this.mytabview = this.selectComponent('#mytabview')
-  //   this.setData({
-  //     slotIds: this.mytabview.getSlotIds()
-  //   })
-  // },
-
-  onLoad: function (e) {
-    var windowWidth = '', windowHeight = '';    //定义宽高
-    try {
-      var res = wx.getSystemInfoSync();    //试图获取屏幕宽高数据
-      windowWidth = res.windowWidth / 750 * 690;   //以设计图750为主进行比例算换
-      windowHeight = res.windowWidth / 750 * 550    //以设计图750为主进行比例算换
-    } catch (e) {
-      console.error('getSystemInfoSync failed!');   //如果获取失败
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
     }
-    lineChart = new wxCharts({     //定义一个wxCharts图表实例
-      canvasId: 'lineCanvas',     //输入wxml中canvas的id
-      type: 'line',       //图标展示的类型有:'line','pie','column','area','ring','radar'
-      categories: ['2018-6-13', '2018-6-14', '2018-6-15', '2018-6-16', '2018-6-17', '2018-6-18', '2018-6-19'],    //模拟的x轴横坐标参数
-      animation: true,  //是否开启动画
-      series: [{   //具体坐标数据
-        name: '收缩压',  //名字
-        data: [60, 90, 60, 110, 120, 105, 70],  //数据点
-        format: function (val, name) {  //点击显示的数据注释
-          return val + 'mmHg';
-        }
-      }, {
-        name: '舒张压',
-        data: [50, 100, 80, 115, 120, 90, 125],
-        format: function (val, name) {
-          return val + 'mmHg';
-        }
-      }, {
-        name: '心率',
-        data: [60, 70, 90, 105, 120, 130, 95],
-        format: function (val, name) {
-          return val + '次/分钟';
-        }
-      }
-      ],
-      xAxis: {   //是否隐藏x轴分割线
-        disableGrid: true,
-      },
-      yAxis: {      //y轴数据
-        title: '数值',  //标题
-        format: function (val) {  //返回数值
-          return val.toFixed(2);
-        },
-        min: 30,   //最小值
-        max: 180,   //最大值
-        gridColor: '#D8D8D8',
-      },
-      width: windowWidth,  //图表展示内容宽度
-      height: windowHeight,  //图表展示内容高度
-      dataLabel: false,  //是否在图表上直接显示数据
-      dataPointShape: true, //是否在图标上显示数据点标志
-      extra: {
-        lineStyle: 'curve'  //曲线
-      },
-    });
   },
 
-  pageChangeEvent: function (e) {
-    console.log(e)
+  login(){
+    this.setData({
+      isGoLogin: true,
+    })
   },
 
-  scrolltobottomEvent: function (e) {
-    console.log(e)
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
-
 })

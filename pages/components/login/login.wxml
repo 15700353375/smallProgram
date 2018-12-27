@@ -1,0 +1,21 @@
+<!--pages/components/login/login.wxml-->
+<view class='container'>
+  <form class='form-login clearfix' bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class='form-content clearfix'>
+      <view class="section">
+        <view class="section__title">手机号码</view>
+        <input name="phone" type='number' bindblur='phoneBlur' placeholder="请输入手机号码" />
+      </view>
+      <view class="section">
+        <view class="section__title">动态码</view>
+        <input name="code" type='number' placeholder="请输入手机验证码" />
+        <button class='code {{isRightPhone == true ? "disabled": ""}}' disabled='{{isRightPhone}}' bindtap='getCode'>获取验证码</button>
+      </view>
+    </view>
+
+    <view class="btn-area">
+      <button class='login-btn' form-type="submit">绑定</button>
+    </view>
+  </form>
+</view>

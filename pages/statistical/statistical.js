@@ -1,4 +1,4 @@
-// pages/personal/personal.js
+// pages/statistical/statistical.js
 Page({
 
   /**
@@ -13,12 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-
-  newBind(){
-    wx.redirectTo({
-      url: '/pages/logs/logs'
-    });
   },
 
   /**

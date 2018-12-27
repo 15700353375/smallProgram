@@ -1,35 +1,16 @@
 {
   "pages": [
+    "pages/logs/logs",    
     "pages/index/index",
-    "pages/logs/logs",
     "pages/personal/personal",
-    "pages/advertising/advertising"
+    "pages/advertising/advertising",
+    "pages/statistical/statistical"
   ],
-  "subpackages": [
-    {
-      "root": "packageA",
-      "name": "packA",
-      "pages": [
-        "pages/statistical/statistical",
-        "pages/report/report",
-        "pages/manager/manager",
-        "pages/myself/myself"
-      ]
-    }
-  ],
-  "preloadRule": {
-    "pages/index/index": {
-      "network": "all",
-      "packages": [
-        "packageA"
-      ]
-    }
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3a98cc",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "涨钟宝",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#1296db",

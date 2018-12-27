@@ -43,7 +43,7 @@
     loading="{{loading}}"
     plain="{{plain}}"
     disabled="{{disabled}}"
-    bindtap="default"
+    bindtap="newBind"
     hover-class="other-button-hover"
   >
     重新绑定
