@@ -53,6 +53,22 @@ Page({
     })
   },
 
+  getUserInfo(e) {
+    console.log(e)
+    wx.getUserInfo({
+      success: (res) => {
+        console.log(res)
+        // this.setData({
+        //   userInfo: res.userInfo
+        // });
+
+        this.setData({
+          isGoLogin: true,
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
