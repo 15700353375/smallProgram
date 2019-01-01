@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: null,
   },
 
   /**
@@ -15,11 +15,21 @@ Page({
     if(options){
       console.log(options)
     }
+    let that = this;
+
+    wx.getStorage({
+      key: 'userInfo',
+      success: function(res) {
+        that.setData({
+          userInfo: res.data
+        })
+      },
+    })
   },
 
   newBind(){
     wx.redirectTo({
-      url: '/pages/logs/logs'
+      url: '/pages/login/login'
     });
   },
 

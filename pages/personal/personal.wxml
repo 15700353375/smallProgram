@@ -5,8 +5,8 @@
       <image src='../../img/2.jpg'></image>
     </view>
     <view class='personal-content'>
-      <view class='personal-name'>古天乐</view>
-      <view class='personal-desc'>钻石王老五</view>
+      <view class='personal-name'>{{userInfo.name}}</view>
+      <view class='personal-desc'>{{userInfo.desc}}</view>
     </view>
   </view>
 

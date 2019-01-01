@@ -10,7 +10,7 @@
       <view class="section">
         <view class="section__title">动态码</view>
         <input name="code" type='number' placeholder="请输入手机验证码" />
-        <button class='code {{isRightPhone == true ? "disabled": ""}}' disabled='{{isRightPhone}}' bindtap='getCode'>获取验证码</button>
+        <button class='code {{isRightPhone == true ? "disabled": ""}}' disabled='{{isRightPhone}}' bindtap='getCode'>{{isGetCode? countdown+'s后重发' : '获取验证码'}}</button>
       </view>
     </view>
 

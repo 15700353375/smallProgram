@@ -2,8 +2,8 @@
 var common = require("../../utils/common.js")
 //获取应用实例
 const app = getApp()
-// import indexList from "../../mock/index-list.json"
-const indexList = require("../../mock/index-list.js")
+//引入接口api文件
+import API from "../../utils/api.js";
 Page({
   data: {
     alllist: [],
@@ -24,7 +24,6 @@ Page({
 
 
 
-    console.log(indexList)
     this.getList();
   },
 
@@ -32,21 +31,15 @@ Page({
   getList: function(e) {
     let that = this;
 
-    // 豆瓣电影
-    wx.request({
-      url: 'http://t.yushu.im/v2/movie/in_theaters',
-      data: {},
-      header: {
-        "Content-Type": "json"
-      },
-      success: function (res) {
-        console.log(res.data.subjects);
-        that.setData({
-          alllist: res.data.subjects
-        })
-      },
-    });  
+    app.requestApi(API.indexListUrl, {}, (err, data) => {
+      console.log(data)
+      console.log(data.subjects);
+      that.setData({
+        alllist: data.subjects
+      })
+    })
 
+    // 豆瓣电影
     // wx.request({
     //   url: '../../mock/index-list.json',
     //   success: (res)=>{
