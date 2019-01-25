@@ -1,4 +1,5 @@
 //app.js
+var login = require("./utils/common.js")
 App({
   onLaunch: function () {
     // 判断是否是登录态  如果不是查看是否微信授权-如果未授权-授权
@@ -12,25 +13,27 @@ App({
       },
     })
 
-    // // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // 判断是否存在sessionKey 
+    login.userLogin()
 
-        wx.checkSession({
-          success: function () {
-            //存在登陆态      
-          },
-          fail: function () {
-            //不存在登陆态-重新登录
-            wx.redirectTo({
-              url: '/pages/login/login'
-            });
-          }
-        })        
-      }
-    })
+    // // 登录
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //     // 判断是否存在sessionKey 
+    //     wx.checkSession({
+    //       success: function () {
+    //         //存在登陆态      
+
+    //       },
+    //       fail: function () {
+    //         //不存在登陆态-重新登录
+    //         wx.redirectTo({
+    //           url: '/pages/login/login'
+    //         });
+    //       }
+    //     })        
+    //   }
+    // })
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -59,10 +62,11 @@ App({
     })
   },
 
+
   // 全局变量
   globalData: {
     userInfo: null,
-    // host: 'http://192.168.0.99:9130/',
+    host: 'http://qsyfw.gnway.cc:12345',
   },
 
   // 小程序请求封装

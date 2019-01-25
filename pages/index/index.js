@@ -31,13 +31,13 @@ Page({
   getList: function(e) {
     let that = this;
 
-    app.requestApi(API.indexListUrl, {}, (err, data) => {
-      console.log(data)
-      console.log(data.subjects);
-      that.setData({
-        alllist: data.subjects
-      })
-    })
+    // app.requestApi(API.indexListUrl, {}, (err, data) => {
+    //   console.log(data)
+    //   console.log(data.subjects);
+    //   that.setData({
+    //     alllist: data.subjects
+    //   })
+    // })
 
     // 豆瓣电影
     // wx.request({
