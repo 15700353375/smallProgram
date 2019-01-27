@@ -37,13 +37,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "自定义页面",
-					"pathName": "pages/index/index",
-					"query": ""
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,

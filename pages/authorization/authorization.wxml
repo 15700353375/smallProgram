@@ -1,0 +1,18 @@
+<!--pages/authorization/authorization.wxml-->
+  
+<view class='container'>
+    <view class='clearfix userinfo-mian'>
+      <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="../../img/icon/gongneng.png" mode="cover"></image>
+        <view class="userinfo-tips">允许小程序获取您的基本信息（头像、昵称等）</view>
+      </view>
+
+      <view class='footer-main'>
+        <view class='footer-btn'>
+          <!-- <button class='login-btn' bindtap='login'> 重新登录 </button> -->
+          <button class='login-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+        </view>
+        <view class='footer-text'>足浴保健行业引领者</view>
+      </view>
+    </view>
+</view>

@@ -1,6 +1,6 @@
 {
   "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "登录",
+  "navigationBarTitleText": "授权",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
   "enablePullDownRefresh": true

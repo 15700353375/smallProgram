@@ -1,84 +1,120 @@
-// pages/personal/personal.js
-//index.js
-var login = require("../../utils/common.js")
+// pages/components/login/login.js
+
 //获取应用实例
 const app = getApp()
+//引入接口api文件
+import API from "../../utils/api.js";
+
 Page({
 
+  /**
+   * 页面的初始数据
+   */
   data: {
-
-    isGoLogin: false,
+    isRightPhone: true,
+    phone: '',
+    countdown: 60,
+    isGetCode: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-
+  onLoad: function (options) {
+    console.log(app.globalData.sessionId)
   },
 
-  // 授权-去到绑定登录页面
-  getUserInfo(e) {
-    console.log(e)
-    wx.getUserInfo({
-      success: (res) => {
-        console.log(res)
-        // 修改全局个人信息变量
-        getApp().globalData.userInfo = res.userInfo;
-        // 切换状态-到登录
+  // 电话号码验证
+  phoneBlur(e) {
+    let phone = e.detail.value;
+    this.setData({
+      phone: phone
+    })
+    let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+    if (reg.test(phone)) {
+      this.setData({
+        isRightPhone: false
+      })
+    } else {
+      this.setData({
+        isRightPhone: true
+      })
+    }
+  },
+
+  // 获取验证码
+  getCode(e) {
+    let phone = this.data.phone;
+
+    app.requestApi(API.getCode, { uPhone: phone }, (res) => {
+      if (res) {
+        // 成功-倒计时
         this.setData({
-          isGoLogin: true,
+          isGetCode: true,
+          isRightPhone: true,
         })
+        let countdown = this.data.countdown;
+        let timer = setInterval(() => {
+          countdown--;
+          this.setData({
+            countdown: countdown
+          })
+          // 可以充下电获取验证码
+          if (countdown <= 0) {
+            clearInterval(timer);
+            this.setData({
+              isRightPhone: false,
+              isGetCode: false,
+              countdown: 60
+            })
+          }
+        }, 1000)
       }
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  formSubmit(e) {
+    let reg_code = /^[0-9]{4}$/;
+    let reg_phone = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+    let phone = e.detail.value.phone
+    let code = e.detail.value.code
+    if (!reg_phone.test(phone)) {
+      wx.showToast({
+        title: '输入正确的手机号',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    } else if (!reg_code.test(code)) {
+      wx.showToast({
+        title: '输入正确的验证码',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    }
+    this.login(phone, code);
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  // 绑定用户
+  login(phone, code) {
+    let data = {
+      uPhone: phone,
+      vCode: code
+    }
+    app.requestApi(API.login, data, (res) => {
+      if (res){
+        wx.switchTab({
+          url: '/pages/index/index'
+        })
+      }
+    });
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    
   }
 })

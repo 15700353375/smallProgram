@@ -29,7 +29,7 @@ Page({
 
   newBind(){
     wx.redirectTo({
-      url: '/pages/login/login'
+      url: '/pages/authorization/authorization'
     });
   },
 

@@ -1,5 +1,4 @@
 
-var common = require("../../utils/common.js")
 //获取应用实例
 const app = getApp()
 //引入接口api文件
@@ -8,21 +7,9 @@ Page({
   data: {
     alllist: [],
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
 
 
   onLoad: function () {
-    // debugger
-    // // 检测是否登录
-    // common.userLogin()
-    
-
-
 
     this.getList();
   },
@@ -30,6 +17,16 @@ Page({
 
   getList: function(e) {
     let that = this;
+
+    // 后台登录
+    app.requestApi(API.indexListUrl, { sessionId: app.globalData.sessionId }, (res) => {
+      console.log(res)
+      if (res) {
+        that.setData({
+        alllist: res.data
+      })
+      }
+    })
 
     // app.requestApi(API.indexListUrl, {}, (err, data) => {
     //   console.log(data)
