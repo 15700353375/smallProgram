@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="list-container">
-  <view class='list' wx:for="{{alllist}}" wx:for-item="item" bindtap='goStatistical'>
-    <image src='{{item.images.large}}'></image>
+  <view class='list' wx:for="{{alllist}}" wx:for-item="item" data-current="{{item}}"  bindtap='goStatistical'>
+    <image src='{{item.url || "http://qsyfw.gnway.cc:12345/static/images/user_1.jpg"}}'></image>
     <view class='list-body'>
       <view class='list-item-title text-ellipsis'>{{item.storeName}}</view>
       <view class='list-item-address text-ellipsis'>

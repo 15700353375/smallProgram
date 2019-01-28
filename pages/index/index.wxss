@@ -8,10 +8,10 @@ page{
 .list-container {
   height: 100%;
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   padding: 0;
   box-sizing: border-box;
 } 
@@ -23,12 +23,16 @@ page{
   box-sizing: border-box;
   background: #fff;
   margin-top: 20rpx;
+  overflow: hidden;
+  margin: 0;
 }
 
 .list image{
   width: 200rpx;
   height: 200rpx;
   float: left;
+  display: block;
+  vertical-align: middle;
 }
 
 .list .list-body{

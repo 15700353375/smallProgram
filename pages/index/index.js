@@ -10,8 +10,9 @@ Page({
 
 
   onLoad: function () {
-
-    this.getList();
+    if (app.globalData.sessionId){
+      this.getList();
+    }
   },
 
 
@@ -23,7 +24,7 @@ Page({
       console.log(res)
       if (res) {
         that.setData({
-        alllist: res.data
+        alllist: res
       })
       }
     })
@@ -38,9 +39,17 @@ Page({
 
     // 豆瓣电影
     // wx.request({
-    //   url: '../../mock/index-list.json',
+    //   url: 'https://api.douban.com/v2/movie/in_theaters',
+    //   method: 'GET',
+    //   header: { 'content-type': 'application/xml' },
     //   success: (res)=>{
     //     debugger
+    //   //     console.log(data)
+    //   // console.log(data.subjects);
+    //   // that.setData({
+    //   //   alllist: data.subjects
+    //   // })
+      
     //   }
     // })
   },
@@ -52,8 +61,10 @@ Page({
     })
   },
   goStatistical(e){
+    let current = e.currentTarget.dataset.current
+    current['sessionId'] = app.globalData.sessionId;
     wx.navigateTo({
-      url: '/pages/statistical/statistical',
+      url: '/pages/statistical/statistical?current=' + JSON.stringify(current),
     })
   }
 })

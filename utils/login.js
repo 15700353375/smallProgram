@@ -1,12 +1,13 @@
 import API from "./api.js";
 // const app = getApp()
 function userLogin(app) {
-
   // 判断本地是否存在sessionId
   var sessionId = wx.getStorageSync('SESSIONID')
+  
   // sessionId = '58e6cdd7e4484df5952e2a7aa546346b'
   // console.log("取得 SESSIONID : " + sessionId)
   if (sessionId) {
+    app.globalData.sessionId = sessionId
     wx.checkSession({
       success: res => {
         // session_key 未过期，并且在本生命周期一直有效
@@ -14,9 +15,8 @@ function userLogin(app) {
         app.requestApi(API.check3rdSession, { sessionId: sessionId }, (res) => {
           console.log(res)
           if (res) {
-            if (res.code === 1) {
               // console.log("后台没过期")
-              if (res.isBindUser === false) {
+            if (res.isBindUser === false) {
                 console.log("wxLogin:需要绑定用户 need todo去绑定用户手机画面")
                 wx.redirectTo({
                   url: '/pages/login/login'
@@ -27,12 +27,6 @@ function userLogin(app) {
                   url: '/pages/index/index'
                 });
               }
-            } else if (res.code === -1) {
-              // 已过期
-              wx.redirectTo({
-                url: '/pages/login/login'
-              });
-            }
           }
         })
       },
@@ -56,7 +50,7 @@ function doLogin(app) {
       // 发送 res.code 到后台换取 openId, sessionKey, unionId
       if (res.code) {
         // 后台登录
-        app.requestApi(API.login, {code: res.code}, (res) => {
+        app.requestApi(API.login, { code: res.code}, (res) => {
           console.log(res)
           if(res){
             console.log("登录成功")

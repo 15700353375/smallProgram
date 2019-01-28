@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    url: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.current)
+    this.setData({
+      url: `http://192.168.0.98:8003/#/?current=${options.current}#wechat_redirect`
+    })
   },
 
   bindGetMsg(e){

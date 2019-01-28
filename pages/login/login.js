@@ -44,9 +44,13 @@ Page({
 
   // 获取验证码
   getCode(e) {
-    let phone = this.data.phone;
 
-    app.requestApi(API.getCode, { uPhone: phone }, (res) => {
+    let params ={
+      uPhone: this.data.phone,
+      sessionId: app.globalData.sessionId
+    }
+
+    app.requestApi(API.getCode, params, (res) => {
       if (res) {
         // 成功-倒计时
         this.setData({
@@ -100,9 +104,10 @@ Page({
   login(phone, code) {
     let data = {
       uPhone: phone,
-      vCode: code
+      vCode: code,
+      sessionId: app.globalData.sessionId
     }
-    app.requestApi(API.login, data, (res) => {
+    app.requestApi(API.bindUser, data, (res) => {
       if (res){
         wx.switchTab({
           url: '/pages/index/index'

@@ -71,11 +71,27 @@ App({
       data: data,
       method: 'POST',
       header: {
-        'Content-Type': 'application/json; charset=utf-8'
+        'Content-Type': 'application/json'
       },
       success(res) {
-        if(res.code == 1){
-          callback(null, res.data);
+
+        if (res.statusCode == 200){
+          if(res.data.code == 1){
+            callback(res.data.data || true);
+          } else if (res.data.code === -1) {
+            // 已过期
+            wx.clearStorageSync()
+            login.userLogin(this)
+            // wx.redirectTo({
+            //   url: '/pages/login/login'
+            // });
+          }else{
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              duration: 2000
+            })
+          }
         }else{
           // callback(res);
           wx.showToast({ 
