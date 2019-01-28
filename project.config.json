@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
 	"appid": "wxc11b5ae00c72aac0",
-	"projectname": "week",
+	"projectname": "smallProgram",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

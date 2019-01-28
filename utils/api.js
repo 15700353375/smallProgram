@@ -13,6 +13,8 @@ const api = {
   check3rdSession: host + '/wechatMini/check3rdSession',
   // 绑定用户
   bindUser: host + '/wechatMini/bindUserPhone',
+  getBillInfoWithoutFree: host + '/wechatMini/getBillInfoWithoutFree',
+
 
 }
 
