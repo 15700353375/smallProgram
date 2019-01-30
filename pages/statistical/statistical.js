@@ -17,25 +17,24 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.current)
-    // this.setData({
-    //   url: `http://192.168.0.98:8003/#/?current=${options.current}#wechat_redirect`
-    // })
-
-    let params = JSON.parse(options.current)
-
-    let data = {
-      holderId: params.holderId,
-      holderType: Number(params.holderType),
-      holdrGroup: params.holdGroup,
-      sessionId: app.globalData.sessionId
-    }
-  debugger
-    app.requestApi(API.getBillInfoWithoutFree, data, (res) => {
-      console.log(res)
-      if (res) {
-        debugger
-      }
+    this.setData({
+      url: `http://192.168.0.98:8003/#/?current=${options.current}`
     })
+
+    // let params = JSON.parse(options.current)
+
+    // let data = {
+    //   holderId: (params.holderId).toString(),
+    //   holderType: params.holderType,
+    //   holderGroup:(params.holdGroup).toString(),
+    //   sessionId: app.globalData.sessionId
+    // }
+    // app.requestApi(API.getBillInfoWithoutFree, data, (res) => {
+    //   console.log(res)
+    //   if (res) {
+    //     debugger
+    //   }
+    // })
   },
 
   bindGetMsg(e){

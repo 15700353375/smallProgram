@@ -10,9 +10,9 @@ Page({
 
 
   onLoad: function () {
-    if (app.globalData.sessionId){
+    // if (app.globalData.sessionId){
       this.getList();
-    }
+    // }
   },
 
 

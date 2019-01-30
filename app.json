@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/authorization/authorization",
     "pages/index/index",
     "pages/login/login",
     "pages/personal/personal",
     "pages/advertising/advertising",
-    "pages/statistical/statistical",
-    "pages/authorization/authorization"
+    "pages/statistical/statistical"
   ],
   "window": {
     "backgroundTextStyle": "light",

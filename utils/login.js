@@ -23,7 +23,7 @@ function userLogin(app) {
                 });
               } else {
                 // 已绑定
-                wx.redirectTo({
+              wx.switchTab({
                   url: '/pages/index/index'
                 });
               }
@@ -64,7 +64,7 @@ function doLogin(app) {
               });
             } else {
               // 已绑定
-              wx.redirectTo({
+              wx.switchTab({
                 url: '/pages/index/index'
               });
             }

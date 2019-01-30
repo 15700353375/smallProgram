@@ -66,6 +66,7 @@ App({
 
   // 小程序请求封装
   requestApi(url, data, callback){
+    let that = this;
     wx.request({
       url: url,
       data: data,
@@ -81,7 +82,8 @@ App({
           } else if (res.data.code === -1) {
             // 已过期
             wx.clearStorageSync()
-            login.userLogin(this)
+            
+            login.userLogin(that)
             // wx.redirectTo({
             //   url: '/pages/login/login'
             // });
