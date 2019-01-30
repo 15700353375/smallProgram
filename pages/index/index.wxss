@@ -14,6 +14,7 @@ page{
   justify-content: space-between; */
   padding: 0;
   box-sizing: border-box;
+  padding-top: 10px;
 } 
 
 .list{
@@ -25,6 +26,12 @@ page{
   margin-top: 20rpx;
   overflow: hidden;
   margin: 0;
+}
+.list:first-child{
+  border-top: 1px solid #d1d1d1;
+}
+.list:last-child{
+  border-bottom: 1px solid #d1d1d1;
 }
 
 .list image{

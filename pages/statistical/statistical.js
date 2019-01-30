@@ -17,8 +17,10 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.current)
+    let current = JSON.parse(options.current)
+    current['holderType'] = Number(current.holderType)
     this.setData({
-      url: `http://192.168.0.98:8003/#/?current=${options.current}`
+      url: `http://192.168.0.101:8003/#/?current=${JSON.stringify(current)}`
     })
 
     // let params = JSON.parse(options.current)

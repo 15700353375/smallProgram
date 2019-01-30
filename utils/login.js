@@ -3,7 +3,7 @@ import API from "./api.js";
 function userLogin(app) {
   // 判断本地是否存在sessionId
   var sessionId = wx.getStorageSync('SESSIONID')
-  
+
   // sessionId = '58e6cdd7e4484df5952e2a7aa546346b'
   // console.log("取得 SESSIONID : " + sessionId)
   if (sessionId) {
@@ -21,12 +21,13 @@ function userLogin(app) {
                 wx.redirectTo({
                   url: '/pages/login/login'
                 });
-              } else {
+            } else {
+              console.log('index')
                 // 已绑定
               wx.switchTab({
                   url: '/pages/index/index'
-                });
-              }
+              });
+            }
           }
         })
       },

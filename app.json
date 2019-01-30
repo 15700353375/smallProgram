@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/authorization/authorization",
     "pages/index/index",
     "pages/login/login",
     "pages/personal/personal",
     "pages/advertising/advertising",
+    "pages/authorization/authorization",
     "pages/statistical/statistical"
   ],
   "window": {
