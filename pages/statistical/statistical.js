@@ -17,10 +17,22 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.current)
+    let current = JSON.parse(options.current);
+    
+    // 将参数全部处理为字符串
+    current.holderId = (current.holderId).toString()
+    current.holdGroup = (current.holdGroup).toString()
+    current = JSON.stringify(current)
+
+    // 个人信息
+    let userInfo = app.globalData.userInfo;
+    userInfo = JSON.stringify(userInfo)
+    // h5的地址
     this.setData({
-      url: `http://192.168.0.98:8003/#/?current=${options.current}`
+      url: `http://192.168.0.98:8003/#/?current=${current}&userInfo=${userInfo}`
     })
 
+    // 测试数据
     // let params = JSON.parse(options.current)
 
     // let data = {

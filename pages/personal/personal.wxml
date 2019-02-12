@@ -2,11 +2,11 @@
 <view class='personal-container'>
   <view class='personal-info'>
     <view class='personal-img-box'>
-      <image src='../../img/2.jpg'></image>
+      <image src='{{userInfo.avatarUrl}}'></image>
     </view>
     <view class='personal-content'>
-      <view class='personal-name'>{{userInfo.name}}</view>
-      <view class='personal-desc'>{{userInfo.desc}}</view>
+      <view class='personal-name'>{{userInfo.nickName}}</view>
+      <view class='personal-desc'>涨钟宝SASS小程序</view>
     </view>
   </view>
 
