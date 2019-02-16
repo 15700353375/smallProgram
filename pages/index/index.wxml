@@ -11,7 +11,7 @@
       </view>
       <view class='list-item-phone' data-phone="{{item.phone}}" bindtap='call'>
         <text class='iconfont icon-dianhua'></text>
-        {{item.fphone}}
+        {{item.fphone || '028-10086'}}
       </view>
     </view>
   </view>
