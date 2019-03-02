@@ -3,5 +3,5 @@
   "navigationBarTitleText": "登录",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false
 }

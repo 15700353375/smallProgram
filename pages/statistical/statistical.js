@@ -29,10 +29,7 @@ Page({
     userInfo = JSON.stringify(userInfo)
     // h5的地址
     this.setData({
-      // url: `http://192.168.0.98:8003/#/?current=${current}&userInfo=${userInfo}`
-      url: `http://mbackend.huixuebang.com/#/?current=${current}&userInfo=${userInfo}`
-
-      
+      url: `http://192.168.0.98:8003/#/?current=${current}&userInfo=${userInfo}`
     })
 
     // 测试数据
@@ -53,7 +50,7 @@ Page({
   },
 
   bindGetMsg(e){
-    debugger
+
   },
 
   /**

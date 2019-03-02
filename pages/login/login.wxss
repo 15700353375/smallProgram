@@ -59,7 +59,9 @@ page{
   line-height: 118rpx;
   font-size: 30rpx;
 }
+.form-login .section button::after{ border: none; }
 .form-login .section .code{
+  border: none;
   position: absolute;
   right: 20rpx;
   top: 26rpx;
@@ -68,16 +70,24 @@ page{
   font-size: 26rpx;
   text-align: center;
   line-height: 70rpx;
-  background: none;
   padding: 0 20rpx;
   z-index: 999;
   color: #3a98cc;
+  background-color: #fff;
+  border:2rpx solid #3a98cc;
 }
 .form-login .section .code.disabled{
-  color: rgba(0, 0, 0, 0.3);
+  color: #c5c8ce;
+  background-color: #f7f7f7;
+  border:2rpx solid #dcdee2;
 }
 
-
+.clearPhone{
+  position: absolute;
+  right: 20rpx;
+  top: 36rpx;
+  z-index: 9999;
+}
 
 
 

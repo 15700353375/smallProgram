@@ -42,6 +42,13 @@ Page({
     }
   },
 
+  clearPhone(){
+    this.setData({
+      phone: '',
+      isRightPhone: false
+    })
+  },
+
   // 获取验证码
   getCode(e) {
 
@@ -49,7 +56,6 @@ Page({
       uPhone: this.data.phone,
       sessionId: app.globalData.sessionId
     }
-
     app.requestApi(API.getCode, params, (res) => {
       if (res) {
         // 成功-倒计时

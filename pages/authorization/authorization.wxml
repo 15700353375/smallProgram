@@ -12,7 +12,8 @@
           <!-- <button class='login-btn' bindtap='login'> 重新登录 </button> -->
           <button class='login-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
         </view>
-        <view class='footer-text'>足浴保健行业引领者</view>
+        <view class='footer-text'>精细化管理</view>
+        <view class='footer-text'>打造足浴保健行业SaaS第一品牌</view>
       </view>
     </view>
 </view>

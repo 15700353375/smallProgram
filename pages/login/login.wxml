@@ -5,7 +5,8 @@
     <view class='form-content clearfix'>
       <view class="section">
         <view class="section__title">手机号码</view>
-        <input name="phone" type='number' bindblur='phoneBlur' placeholder="请输入手机号码" />
+        <input name="phone" type='number' value='{{phone}}' bindinput='phoneBlur' maxlength='11' placeholder="请输入手机号码" />
+        <icon class='clearPhone' type="clear" bindtap='clearPhone' size="26" />
       </view>
       <view class="section">
         <view class="section__title">动态码</view>

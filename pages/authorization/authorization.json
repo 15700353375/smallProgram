@@ -3,5 +3,5 @@
   "navigationBarTitleText": "授权",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false
 }
