@@ -24,9 +24,12 @@ function userLogin(app) {
             } else {
               console.log('index')
                 // 已绑定
-              wx.switchTab({
-                  url: '/pages/index/index'
-              });              
+              wx.reLaunch({
+                url: '/pages/index/index'
+              });
+              // wx.switchTab({
+              //     url: '/pages/index/index'
+              // });              
             }
           }
         })
@@ -65,9 +68,12 @@ function doLogin(app) {
               });
             } else {
               // 已绑定
-              wx.switchTab({
+              wx.reLaunch({
                 url: '/pages/index/index'
               });
+              // wx.switchTab({
+              //   url: '/pages/index/index'
+              // });
             }
           }
         })
