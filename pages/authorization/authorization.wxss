@@ -46,7 +46,7 @@ page{
 
 .footer-main{
   width: 100%;
-  height: 200rpx;
+  height: 220rpx;
 }
 
 .footer-text{

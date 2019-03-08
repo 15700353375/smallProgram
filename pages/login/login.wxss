@@ -58,6 +58,7 @@ page{
   height: 118rpx;
   line-height: 118rpx;
   font-size: 30rpx;
+  width: 480rpx;
 }
 .form-login .section button::after{ border: none; }
 .form-login .section .code{
@@ -82,11 +83,19 @@ page{
   border:2rpx solid #dcdee2;
 }
 
-.clearPhone{
+.clearPhone_main{
   position: absolute;
-  right: 20rpx;
-  top: 36rpx;
+  right: 0rpx;
+  top: 0rpx;
   z-index: 9999;
+  height:118rpx;
+  width: 100rpx;
+}
+
+.clearPhone{
+  margin-right: 30rpx;
+  margin-top: 36rpx;
+  float:right;
 }
 
 

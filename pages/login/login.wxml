@@ -6,7 +6,9 @@
       <view class="section">
         <view class="section__title">手机号码</view>
         <input name="phone" type='number' value='{{phone}}' bindinput='phoneBlur' maxlength='11' placeholder="请输入手机号码" />
-        <icon class='clearPhone' type="clear" bindtap='clearPhone' size="26" />
+        <view class='clearPhone_main'>
+          <icon class='clearPhone' type="clear" bindtap='clearPhone' size="26" />
+        </view>
       </view>
       <view class="section">
         <view class="section__title">动态码</view>

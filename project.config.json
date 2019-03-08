@@ -42,7 +42,7 @@
 				{
 					"id": 0,
 					"name": "自定义页面",
-					"pathName": "pages/login/login",
+					"pathName": "pages/authorization/authorization",
 					"query": "",
 					"scene": null
 				},

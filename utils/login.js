@@ -26,7 +26,7 @@ function userLogin(app) {
                 // 已绑定
               wx.switchTab({
                   url: '/pages/index/index'
-              });
+              });              
             }
           }
         })

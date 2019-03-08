@@ -16,7 +16,6 @@ Page({
 
   // 授权-去到绑定登录页面
   getUserInfo(e) {
-    console.log(e)
     wx.getUserInfo({
       success: (res) => {
         console.log(res)

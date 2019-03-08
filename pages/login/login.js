@@ -31,7 +31,8 @@ Page({
       phone: phone
     })
     let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
-    if (reg.test(phone)) {
+    let countdown = this.data.countdown;
+    if (reg.test(phone) && (countdown == 0 || countdown == 60)) {
       this.setData({
         isRightPhone: false
       })
@@ -43,9 +44,10 @@ Page({
   },
 
   clearPhone(){
+    let countdown = this.data.countdown;
     this.setData({
       phone: '',
-      isRightPhone: false
+      isRightPhone: true
     })
   },
 
@@ -58,6 +60,11 @@ Page({
     }
     app.requestApi(API.getCode, params, (res) => {
       if (res) {
+        wx.showToast({
+          title: '验证码已发送',
+          // icon: 'none',
+          duration: 2000
+        })
         // 成功-倒计时
         this.setData({
           isGetCode: true,
